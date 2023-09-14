@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public interface ICrud {
+public interface ICrud <ID, T> {
 
-    void criar(Object objeto);
-    void remover(int id);
-    void atualizar(int id,Object objeto);
-    Object lerUm(int id);
-    ArrayList<Object> lerTodos();
+    T criar(T objeto);
+    boolean remover(ID id);
+    T atualizar(T objeto);
+    T ler(ID id);
+    ArrayList<T> ler();
 }
